@@ -13,11 +13,11 @@ import com.example.androidtechnicalproject.model.Meals
 
 class MealsAdapter(val mView: MealsView) : RecyclerView.Adapter<MealsAdapter.MealsViewHolder>() {
 
-    private val mTransactions = mutableListOf<Meals>()
+    private val mMeals = mutableListOf<Meals>()
 
     fun initialize(meals: List<Meals>){
-        this.mTransactions.clear()
-        this.mTransactions.addAll(meals)
+        this.mMeals.clear()
+        this.mMeals.addAll(meals)
         notifyDataSetChanged()
     }
 
@@ -29,11 +29,11 @@ class MealsAdapter(val mView: MealsView) : RecyclerView.Adapter<MealsAdapter.Mea
     }
 
     override fun getItemCount(): Int {
-        return mTransactions.size
+        return mMeals.size
     }
 
     override fun onBindViewHolder(p0: MealsViewHolder, position: Int) {
-        p0.bind(mTransactions[position], mView, position)
+        p0.bind(mMeals[position], mView, position)
     }
 
     class MealsViewHolder(val binding: MealsItemBinding) :
