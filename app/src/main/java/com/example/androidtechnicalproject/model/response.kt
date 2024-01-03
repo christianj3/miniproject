@@ -2,10 +2,6 @@ package com.example.androidtechnicalproject.model
 
 import androidx.annotation.Keep
 import java.io.Serializable
-
-
-
-
 @Keep
 data class MealResponse(
    val categories: List<Meals>
